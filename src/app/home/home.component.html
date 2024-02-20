@@ -1,0 +1,89 @@
+
+
+<form [formGroup]="checkBoxForm">
+
+  <div class="container" style="width: max;">
+
+  <!--SEO-->
+
+  <section class="justify-content-center m-3">
+    <div class="row align-items-center shadow rounded-3">
+      <div class="col-6 m-4">
+        <h4>{{ options[0].title }}</h4>
+        <p>{{ options[0].description }}</p>
+      </div>
+      <div class="col">
+        <h2>{{ options[0].price }}
+          <i class="bi bi-currency-euro"></i>
+        </h2>
+      </div>
+      <div class="col form-check">
+        <input type="checkbox" class="form-check-input" formControlName="box1" id="box1">
+        <label for="box1" class="form-check-label">Añadir</label>
+      </div>
+    </div>
+  </section>
+
+  <!--ADS-->
+
+  <section class="justify-content-center m-3">
+    <div class="row align-items-center shadow rounded-3">
+      <div class="col-6 m-4">
+        <h4>{{ options[1].title }}</h4>
+        <p>{{ options[1].description }}</p>
+      </div>
+      <div class="col">
+        <h2>{{ options[1].price }}
+          <i class="bi bi-currency-euro"></i>
+        </h2>
+      </div>
+      <div class="col form-check">
+        <input type="checkbox" class="form-check-input" formControlName="box2" id="box2">
+        <label for="box2" class="form-check-label">Añadir</label>
+      </div>
+    </div>
+  </section>
+
+  <!--WEB-->
+
+  <section class="justify-content-center m-3">
+    <div class="row align-items-center shadow rounded-3">
+      <div class="col-6 m-4">
+        <h4>{{ options[2].title }}</h4>
+        <p>{{ options[2].description }}</p>
+      </div>
+      <div class="col">
+        <h2>{{ options[2].price }}
+          <i class="bi bi-currency-euro"></i>
+        </h2>
+      </div>
+      <div class="col form-check">
+        <input type="checkbox" class="form-check-input" formControlName="box3" id="box3">
+        <label for="box3" class="form-check-label">Añadir</label>
+      </div>
+      @if (checkBoxForm.get('box3')?.value) {
+        <div>
+          <app-panel></app-panel>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!--Preu pressupost-->
+
+  <div class="container">
+    <div class="row d-flex justify-content-end">
+      <div class="col-9 text-end">
+        <p class="fw-bold fs-3 text-c"><br>Precio estimado presupuesto:</p>
+      </div>
+      <div class="col-3 text-end">
+        <h3 class="fw-bold fs-2 text-c"><br>{{ currentBudget }}
+          <i class="bi bi-currency-euro"></i>
+        </h3>
+     </div>
+    </div>
+  </div>
+
+</div>
+
+</form>

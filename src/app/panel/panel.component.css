@@ -1,0 +1,8 @@
+.panel {
+  display: flex;
+  width: 3rem;
+  border-color: grey;
+  border-radius: 10px;
+  text-align: center;
+}
+
